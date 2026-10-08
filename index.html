@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoRide</title>
+</head>
+<body>
+    
+    <body>
+        <header>
+            <h1>GoRide</h1>
+            <p><em>Your reliable ride, anytime, anywhere.</em></p>
+            <nav>
+                <a href="#book">Book a Ride</a> | 
+                <a href="#fleet">Our Vehicles</a> | 
+                <a href="#map">Map</a> | 
+                <a href="#media">Media</a> | 
+                <a href="#schedule">Schedule</a> | 
+                <a href="#contact">Contact</a>
+            </nav>
+            <hr>
+        </header>
+        
+
+
+
+    <main>
+    <section id="book">
+      <h2>Book a Ride</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Trip Details</legend>
+          
+          <p>
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+          </p>
+
+          <p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., +63 912 345 6789" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="e.g., name@example.com">
+          </p>
+
+          <p>
+            <label for="pickup">Pick-up location:</label>
+            <input type="text" id="pickup" name="pickup" list="places" placeholder="Select or type pick-up location">
+          </p>
+
+          <p>
+            <label for="dropoff">Drop-off location:</label>
+            <input type="text" id="dropoff" name="dropoff" list="places" placeholder="Select or type drop-off location">
+          </p>
+
+          <datalist id="places">
+            <option value="Central Terminal">
+            <option value="City Hall">
+            <option value="Airport">
+            <option value="University Campus">
+            <option value="Public Market">
+          </datalist>
+
+          <p>
+            <label for="trip-date">Date:</label>
+            <input type="date" id="trip-date" name="trip-date" required>
+          </p>
+
+          <p>
+            <label for="trip-time">Time:</label>
+            <input type="time" id="trip-time" name="trip-time" required>
+          </p>
+
+
+          <p>
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+          </p>
+
+         <p>
+            <label for="vehicle-type">Vehicle type:</label>
+            <select id="vehicle-type" name="vehicle-type">
+              <option value="taxi">Taxi</option>
+              <option value="van">Van</option>
+              <option value="shuttle">Shuttle Bus</option>
+              <option value="motorcycle">Motorcycle Taxi</option>
+              <option value="tricycle">Tricycle</option>
+            </select>
+          </p>
+
+ 
+          <p>
+            Payment method:
+            <label><input type="radio" name="payment" value="cash" checked> Cash</label>
+            <label><input type="radio" name="payment" value="card"> Card</label>
+            <label><input type="radio" name="payment" value="ewallet"> E-Wallet</label>
+          </p>
+
+   
+          <p>
+            Extras:
+            <label><input type="checkbox" name="extras" value="luggage"> Extra luggage</label>
+            <label><input type="checkbox" name="extras" value="childseat"> Child seat</label>
+            <label><input type="checkbox" name="extras" value="wheelchair"> Wheelchair accessible</label>
+          </p>
+
+
+          <p>
+            <label for="notes">Notes for the driver:</label>
+            <textarea id="notes" name="notes" rows="4" cols="30" placeholder="Any special instructions for the driver..."></textarea>
+          </p>
+
+
+          <p>
+            <label>
+              <input type="checkbox" name="terms" required> I agree to the <a href="#terms-info" id="terms-link">Terms &amp; Conditions</a>
+            </label>
+          </p>
+
+          <p>
+            <button type="submit">Book Now</button>
+            <button type="reset">Clear</button>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+    <hr>
+
+    <section id="fleet">
+      <h2>Our Vehicles</h2>
+      
+      <figure>
+        <img src="yellowwhitetaxi.jpg" alt="GoRide standard yellow and white taxi" width="400" height="250">
+        <figcaption><strong>Taxi</strong> - Fast and comfortable taxi for city commutes and quick trips.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="yellowwhitevan.jpg" alt="GoRide spacious passenger van" width="400" height="250">
+        <figcaption><strong>Van</strong> - Spacious vehicle ideal for families, groups, or airport trips.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="yellowwhitebus.jpg" alt="GoRide commuter shuttle bus" width="400" height="250">
+        <figcaption><strong>Shuttle Bus</strong> - Perfect for team or family outings, boasting wide passenger capacity..</figcaption>
+      </figure>
+    </section>
+    <hr>
+
+    <section id="map">
+      <h2>Find Our Stops</h2>
+
+      <iframe 
+        title="GoRide Terminal Map"
+        width="600" 
+        height="400" 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=120.5800%2C16.3900%2C120.6100%2C16.4150&amp;layer=mapnik&amp;marker=16.4023%2C120.5960">
+      </iframe>
+      <br>
+      <a href="https://www.openstreetmap.org/?mlat=16.4023&amp;mlon=120.5960#map=15/16.4023/120.5960" target="_blank" rel="noopener">View larger map</a>
+
+      
+      <map name="routemap">
+        <area shape="rect" coords="50,50,200,250" href="#schedule" alt="Terminal Stop">
+        <area shape="rect" coords="225,50,375,250" href="#schedule" alt="City Hall Stop">
+        <area shape="rect" coords="400,50,550,250" href="#schedule" alt="Airport Stop">
+      </map>
+    </section>
+    <hr>
+
+ 
+    <section id="media">
+      <h2>Media</h2>
+
+      <h3>How GoRide Works (Video)</h3>
+      <video width="480" controls poster="https://www.youtube.com/embed/watch?v=Bj6_Wd3s4Ds">
+        <source src="media/how-it-works.mp4" type="video/mp4">
+        <source src="media/how-it-works.ogv" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
+
+      <h3>Driver Announcement (Audio)</h3>
+      <audio controls>
+        <source src="media/announcement.mp3" type="audio/mpeg">
+        <source src="media/announcement.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>Watch on YouTube (Embedded)</h3>
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/FVud7XZt5J4" 
+        title="GoRide YouTube Promotional Video" 
+        allowfullscreen>
+      </iframe>
+    </section>
+    <hr>
+  </main>
+
+  <section id="schedule">
+    <h2>Shuttle Schedule</h2>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <caption>Daily departures from Central Terminal</caption>
+        <thead>
+            <tr>
+                <th>Route</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+                <th>Fare</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Terminal to City Hall</td>
+                <td>08:00 AM</td>
+                <td>08:30 AM</td>
+                <td>$2.50</td>
+            </tr>
+            <tr>
+                <td>Terminal to University</td>
+                <td>08:30 AM</td>
+                <td>09:00 AM</td>
+                <td>$2.00</td>
+            </tr>
+            <tr>
+                <td>Terminal to Airport</td>
+                <td>09:00 AM</td>
+                <td>09:45 AM</td>
+                <td>$5.00</td>
+            </tr>
+            <tr>
+                <td>Terminal to Public Market</td>
+                <td>09:15 AM</td>
+                <td>09:35 AM</td>
+                <td>$1.75</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Check Your Route</h3>
+    <form method="get">
+        <label for="route-select">Select Route:</label>
+        <select id="route-select" name="route">
+            <option value="city-hall">Terminal to City Hall</option>
+            <option value="university">Terminal to University</option>
+            <option value="airport">Terminal to Airport</option>
+            <option value="public-market">Terminal to Public Market</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+</section>
+<hr>
+
+<section id="contact">
+    <h2>Contact & Feedback</h2>
+    <form enctype="multipart/form-data">
+        <fieldset>
+            <legend>Send Feedback</legend>
+            
+            <label for="feedback-name">Your name:</label><br>
+            <input type="text" id="feedback-name" name="name" required><br><br>
+
+            <label for="feedback-rating">Rate your ride (1-5):</label><br>
+            <input type="range" id="feedback-rating" name="rating" min="1" max="5" value="5"><br><br>
+
+            <label for="feedback-topic">Topic:</label><br>
+            <select id="feedback-topic" name="topic">
+                <option value="compliment">Compliment</option>
+                <option value="complaint">Complaint</option>
+                <option value="lost-item">Lost item</option>
+                <option value="suggestion">Suggestion</option>
+            </select><br><br>
+
+            <label for="feedback-message">Message:</label><br>
+            <textarea id="feedback-message" name="message" rows="4" cols="40" required></textarea><br><br>
+
+            <label for="feedback-photo">Attach a photo (optional):</label><br>
+            <input type="file" id="feedback-photo" name="photo" accept="image/*"><br><br>
+
+            <button type="submit">Send Feedback</button>
+        </fieldset>
+    </form>
+
+    <h3>Reach Us</h3>
+    <address>
+        City Shuttle Services Inc.<br>
+        123 Transport Avenue, Terminal Hub<br>
+        Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a><br>
+        Email: <a href="mailto:support@cityshuttle.com">support@cityshuttle.com</a>
+    </address>
+</section>
+<hr>
+
+
+<section id="links">
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.openstreetmap.org" target="_blank" rel="noopener noreferrer">OpenStreetMap</a></li>
+        <li><a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
+        <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook Page</a></li>
+        <li><a href="#top">Back to top</a></li>
+    </ul>
+</section>
+
+<section id="terms-info">
+    <h2>Terms & Conditions</h2>
+    <details>
+        <summary>Read the terms</summary>
+        <ol>
+            <li>Passengers must present a valid ticket or fare payment when boarding.</li>
+            <li>Smoking, eating, and drinking alcoholic beverages are strictly prohibited inside the vehichle.</li>
+            <li>The company is not responsible for lost or unattended personal items left on board.</li>
+        </ol>
+    </details>
+</section>
+</main>
+
+<footer>
+<hr>
+<p>&copy; 2026 GoRide Inc. All rights reserved.</p>
+</footer>
+    </body>
+    </div>
+    
+</body>
+</html>
